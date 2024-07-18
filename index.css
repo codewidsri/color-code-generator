@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100dvw;
+    height: 100dvh;
+    font-family: fantasy;
+    background-color:  #F0EAD6;
+    /* background-color: #ffff00; */
+}
+
+:root::-webkit-scrollbar {
+    display: none;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+header nav .logo h1 a {
+    font-size: 40px;
+    margin: 10px 10px;
+    text-decoration: none;
+    background: linear-gradient(to right,violet,indigo,blue,green,yellow,orange,red);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.count {
+    margin: 0 10px;
+    width: fit-content;
+    height: fit-content;
+    background-color: red;
+    padding: 2px 10px;
+    color: wheat;
+    border-radius: 50% 50%;
+}
+
+main {
+    width: 100dvw;
+    height: 85dvh;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    display: flex;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+main::-webkit-scrollbar {
+    display: none;
+}
+
+main section.sidenavbar {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 5px;
+    position: fixed;
+    width: 16dvw;
+}
+
+main section.sidenavbar a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: rgb(37, 36, 36);
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 5px 0px;
+    font-size: 17px;
+    white-space: nowrap;
+}
+
+main section.sidenavbar a.active {
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px 30px;
+    color: white;
+}
+
+main section.sidenavbar a>span {
+    margin-right: 10px;
+}
+
+main section.sidenavbar a:hover {
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px 30px;
+    color: white;
+}
+
+main section.main-content {
+    width: 90dvw;
+    margin-left: 17%;
+}
+
+main section.main-content>section {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+main section.main-content>section>.boxes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 250px;
+    height: 150px;
+    margin: 10px;
+}
+
+main section.main-content>section>.boxes .box {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin: 3px;
+    cursor: pointer;
+}
+
+main section.main-content>section>.boxes:hover {
+    scale: 1.14;
+}
+
+main section.main-content>section>.boxes .box:not(.box:last-child):hover {
+    scale: 0.7;
+    border: 2px solid;
+}
+
+main section.main-content>section>.boxes .box:last-child {
+    height: fit-content;
+    margin: 5px;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 15px;
+    user-select: none;
+    width: fit-content;
+}
+
+main section.main-content>section>.boxes .box:last-child:hover {
+    background-color: rgb(41, 39, 39);
+    color: white;
+}
+
+main section.main-content section .group-control{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    gap: 10px;
+}
+
+main section.main-content section .group-control input[type='text']{
+    padding: 8px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid;
+}
+
+input[type='range']{
+  cursor: pointer;
+  width: 300px;
+}
+
+main section.main-content section .showcolor{
+    width: 80dvw;
+    height: 50dvh;
+}
+
+main section.main-content section .copygeneratedcolor button{
+    padding: 10px 20px;
+    margin: 10px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(21, 159, 214);
+    color: whitesmoke;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+main section.main-content section .copygeneratedcolor button:hover{
+    background-color: rgb(19, 141, 189);
+}
+
+main section.main-content>section .input-group {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main section.main-content>section .input-group label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    width: 400px;
+    padding: 5px 20px;
+    background-color: white;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+main section.main-content>section .input-group label span {
+    margin-right: 10px;
+}
+
+main section.main-content>section .input-group button {
+    padding: 10px;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(21, 159, 214);
+    color: white;
+    border: none;
+    border-radius: 10px 10px;
+}
+
+input[type='file'] {
+    width: 400px;
+    padding: 5px 20px;
+    border-radius: 50px;
+    opacity: 0;
+}
+
+main section.main-content aside {
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+}
+
+main section.main-content aside>button {
+    background-color: black;
+    color: wheat;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50% 50%;
+    user-select: none;
+    outline: none;
+    border: none;
+}
+
+.model {
+    position: absolute;
+    background-color: rgb(66, 64, 64);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    width: 70dvw;
+    height: 70dvh;
+    top: 70px;
+    margin: 0px 15dvw;
+    border-radius: 20px;
+    display: none;
+}
+
+.model>span {
+    padding: 5px 20px;
+    background-color: rgb(218, 72, 46);
+    color: wheat;
+    float: left;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    transition: all .5s;
+    border-top-left-radius: inherit;
+    display: none;
+}
+
+.model>button {
+    cursor: pointer;
+    outline: none;
+    background-color: black;
+    color: wheat;
+    border: none;
+    float: right;
+    border-top-right-radius: inherit;
+    padding: 5px;
+}
+
+.model .colorvarients {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 50px;
+    gap: 15px;
+}
+
+.model .colorvarients .color {
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.model .colorvarients .color:hover {
+    scale: 0.8;
+}
+
+.model .colorvarients .color>span {
+    font-size: 18px;
+    font-weight: 100;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: none;
+    color: white;
+    padding: 6px;
+    border-radius: 10px;
+}
+
+.model .colorvarients .color:hover>span{
+    display: flex;
+    background-color: black;
+}

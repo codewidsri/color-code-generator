@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Color Code Generator</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+    <script src='index.js' defer></script>
+    <!-- google material icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,700,1,200" />
+</head>
+<body onload="start()">
+    <header>
+        <nav>
+            <div class="logo">
+                <h1><a href="index.html">COLOR CODES GENERATOR</a></h1>
+            </div>
+        </nav>
+    </header>
+    <main  onscroll="scroller()">
+
+        <section class="sidenavbar">
+            <a onclick="tabchange(event,'news')"><span class="material-symbols-outlined">new_releases</span>New</a>
+            <a onclick="tabchange(event,'generatecolor')"><span class="material-symbols-outlined">tune</span>Generate Color</a>
+            <a onclick="tabchange(event,'gradient')"><span class="material-symbols-outlined">palette</span>Generate Gradient</a>
+            <a onclick="tabchange(event,'colorpicker')"><span class="material-symbols-outlined">colorize</span>Color Picker</a>
+            <a onclick="tabchange(event,'collection')"><span class="material-symbols-outlined">collections_bookmark</span>Collections <span class="count">0</span></a>
+        </section>
+
+        <section class="main-content">
+            <section class="content news"></section>
+            <section class="content generatecolor">
+               <div class="group-control"><label for="red">Red</label><input type="range" id="red" min="0" max="255" oninput="changebgcolor(event)"><input type="text" id="r" value="127" oninput="changerange(event)"></div>
+               <div class="group-control"><label for="green">Green</label><input type="range" id="green" min="0" max="255" oninput="changebgcolor(event)"><input type="text" id="g" value="127" oninput="changerange(event)"></div>
+               <div class="group-control"><label for="blue">Blue</label><input type="range" id="blue" min="0" max="255" oninput="changebgcolor(event)"><input type="text" id="b" value="127" oninput="changerange(event)"></div>
+               <div class="showcolor" style="background-color: rgb(127, 127, 127);"></div>
+               <div class="copygeneratedcolor">
+                    <button id="rgb" onclick="copygeneratedcolor(event)">copy RGB</button>
+                    <button id="hex" onclick="copygeneratedcolor(event)">copy hex</button>
+               </div>
+            </section>
+            <section class="content gradient">
+                
+            </section>
+            <section class="content colorpicker">
+                <div class="input-group">
+                    <label for="file"><span class="material-symbols-outlined">add_photo_alternate</span>Select an Image <input type="file" id="file" onchange="image(event)" accept="image/*" ><button onclick="openeyedropper()">open eyedropper</button></label>
+                    <img width="600" alt="source image" id="image">
+                </div>
+            </section>
+            <section class="content collection"></section>
+            <aside><button onclick="scrolltotop()"><span class="material-symbols-outlined">navigation</span></button></aside>
+        </section>  
+
+        <section class="model">
+            <span>copied to clipboard</span>
+            <button onclick="closemodel()"><span class="material-symbols-outlined">close</span></button>
+            <div class="colorvarients"></div>
+        </section>  
+
+    </main>
+</body>
+</html>
